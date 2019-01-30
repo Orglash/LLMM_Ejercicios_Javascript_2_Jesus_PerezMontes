@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Relacion 2. Ejercicio 20.</title>
+</head>
+<body>
+	<script>
+	    var cadena = prompt("Introducza un texto:");
+	    var longitud = cadena.length;
+	    var letra;
+	    var resultado = "";
+	    for (var i=longitud; i>0; i--) {
+	        letra=cadena.charAt(i-1);    //recupera el caracter i del string.
+	        resultado = resultado + letra;
+	    }
+	    document.write("La cadena '"+cadena+"' a la inversa es: '"+resultado+"'.");
+	</script>
+</body>
+</html>

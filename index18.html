@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Relacion 2. Ejercicio 18.</title>
+</head>
+<body>
+<script>
+    var cadena = prompt("Introduzca una cadena de texto:");
+    var longitud = cadena.length;
+    var vocales=0;
+    for (var i = 0; i < longitud; i++) {
+		if (cadena.charAt(i)=="a" || cadena.charAt(i)=="e" || cadena.charAt(i)=="i" || cadena.charAt(i)=="o" || cadena.charAt(i)=="u") {
+			vocales++;
+		}
+    }
+    document.write("El numero de vocales en la cadena '"+cadena+"' es: "+vocales+".");
+</script>
+</body>
+</html>

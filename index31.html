@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Relacion 2. Ejercicio 31.</title>
+</head>
+<body>
+	<script>
+	    function cienAleatorios(){
+	    	var numeros = new Array();
+		    var aux = 0;
+		    var distintos = true;
+		    for(var i=0; i<100; i++){
+		      do{
+		        distintos = true;
+		        aux = Math.round((Math.random() * 999 )+1);
+		        for(var j=0; j < numeros.length; j++){
+		          if(aux == numeros[j]){
+		            distintos = false; 
+		          }
+		        }
+		      }while(distintos == false);
+		      numeros[i] = aux;
+		    }
+		    var cont = 1;
+		    var resultado ="";
+		    for(var i=0; i<numeros.length; i++){
+		      resultado = resultado + "Numero " + cont + ": " + numeros[i] + "<br>";
+		      cont++;
+		    }
+		    return resultado;
+	    }	    
+	    document.write(cienAleatorios());
+	  </script>
+</body>
+</html>

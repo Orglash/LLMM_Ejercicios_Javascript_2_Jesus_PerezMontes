@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Relacion 2. Ejercicio 28.</title>
+</head>
+<body>
+	<script>
+	    function masIva(precio, iva){
+	      iva_aplicado = iva || 21
+	      var total = (precio + precio*iva_aplicado/100);
+	      return total;
+	    }
+	    
+	    var precio = Number(prompt("Introduzca el precio: "));
+	    var iva = Number(prompt("Introduzca el IVA: "));
+	    if(iva > 0){
+	      var resultado = masIva(precio, iva);
+	    }else{
+	      var resultado = masIva(precio);
+	    }
+	    document.write("Precio IVA no incluido: " + precio);
+	    document.write("<br>Precio IVA incluido: " + resultado);
+	  </script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Relacion 2. Ejercicio 25.</title>
+</head>
+<body>
+	<script>
+	    var jugadas = 0;
+	    var victorias = 0;
+	    var derrotas = 0;
+	    do {
+	    	do{
+	        	var eleccion = prompt("Escribe \"piedra\", \"papel\" o \"tijera\".");
+	        	if(eleccion!="piedra"&&eleccion!="papel"&&eleccion!="tijera"){
+	        		alert("Eleccion incorrecta.");
+	        	}
+	    	}while(eleccion!="piedra"&&eleccion!="papel"&&eleccion!="tijera");
+	        var jugada_ia = Math.floor((Math.random() * 9) + 1);
+	        var eleccion_ia = "";
+	        if (jugada_ia <= 3) {
+	            eleccion_ia = "piedra";
+	        }else {
+	        	if (jugada_ia <= 6) {
+	            eleccion_ia = "papel";
+	        	}else {
+	            eleccion_ia = "tijera";
+	        	}
+	        }
+	        if (eleccion==eleccion_ia){
+	        	alert(eleccion+" - "+eleccion_ia+": Empate");
+	        }else{
+	        	if ((eleccion == "piedra") && (eleccion_ia == "papel")) {
+	            	alert(eleccion+" - "+eleccion_ia+": Gana PC");
+	            	derrotas++;
+	            }
+	            if ((eleccion == "piedra") && (eleccion_ia == "tijera")) {
+	            	alert(eleccion+" - "+eleccion_ia+": Gana Jugador");
+	            	victorias++;
+	        	}
+	        	if ((eleccion == "tijera") && (eleccion_ia == "piedra")) {
+	            	alert(eleccion+" - "+eleccion_ia+": Gana PC");
+	            	derrotas++;
+	            }
+	            if ((eleccion == "tijera") && (eleccion_ia == "papel")) {
+	            	alert(eleccion+" - "+eleccion_ia+": Gana Jugador");
+	            	victorias++;
+	        	}
+	        	if ((eleccion == "papel") && (eleccion_ia == "tijera")) {
+	            	alert(eleccion+" - "+eleccion_ia+": Gana PC");
+	            	derrotas++;
+	            }
+	            if ((eleccion == "papel") && (eleccion_ia == "piedra")) {
+	            	alert(eleccion+" - "+eleccion_ia+": Gana Jugador");
+	            	victorias++;
+	        	}
+	        }
+	        jugadas++
+	    }while (confirm("Jugar de nuevo"));
+	    document.write("Partidas jugadas: "+jugadas+"<br>");
+	    document.write("Partidas ganadas: "+victorias+"<br>");
+	    document.write("Partidas perdidas: "+derrotas+"<br>");
+	    document.write("Partidas empatadas: "+(jugadas-victorias-derrotas));
+	</script>
+</body>
+</html>

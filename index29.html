@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Relacion 2. Ejercicio 29.</title>
+</head>
+<body>
+	<script>
+	    function inversorTexto(texto){
+	      var letra = "";
+	      var resultado = "";
+	      for(var i=0; i < texto.length; i++){
+	        letra = texto.charAt(i);
+	        resultado = letra + resultado;
+	      }
+	      return resultado;
+	    }
+	   
+	    var texto = prompt("Introduzca un texto: ");
+	    var invertido = inversorTexto(texto);
+	    document.write("Original: " + texto);
+	    document.write("<br>Al revés: " + invertido);
+	</script>
+</body>
+</html>

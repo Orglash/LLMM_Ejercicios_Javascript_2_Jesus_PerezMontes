@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Relacion 2. Ejercicio 13.</title>
+</head>
+<body>
+	<script>
+		var numero1=Math.floor(Math.random()*100);
+		do{
+			var numero2=Math.floor(Math.random()*100);
+		}while(numero2==numero1);
+		do{
+			var numero3=Math.floor(Math.random()*100);
+		}while(numero3==numero1 || numero3==numero2);
+		document.write(numero1+" "+numero2+" "+numero3);
+	</script>
+</body>
+</html>

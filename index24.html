@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Relacion 2. Ejercicio 24.</title>
+</head>
+<body>
+	<script>
+			var numero = prompt("Introduce un número entre 1 y 100.");
+		while(isNaN(numero) || (numero<1 || numero>100)){
+			alert("Entrada incorrecta.");
+			var numero = prompt("Introduce un número entre 1 y 100.");
+		}
+	        var x = 0;
+	        var y = 1;
+	        var z;
+	        document.write("La secuencia de fibonacci hasta el numero '"+numero+"' es: <br>"+x+"<br>");
+	        for (i = 0; i < (numero-1); i++) {
+	            z = x + y;
+	            document.write(z + "<br>");
+	            y = x;
+	            x = z;
+	        }
+	</script>
+</body>
+</html>

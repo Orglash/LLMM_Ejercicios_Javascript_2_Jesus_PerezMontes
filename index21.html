@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Relacion 2. Ejercicio 21.</title>
+</head>
+<body>
+	<script>
+		var cadena = prompt("Introduzca el texto a comprobar:");
+		var longitud = cadena.length;
+		cadena = cadena.toLowerCase();
+		var letra;
+		var resultado = "";
+		var cad_original = "";
+		var cad_invertida = "";
+		for (var i = 0; i < longitud; i++) {
+			letra = cadena.charAt(i);
+	                
+			if (letra != " ") {
+				cad_original += letra;
+				cad_invertida = letra + cad_invertida;
+			}
+		}
+		if (cad_original == cad_invertida) {
+			document.write("El texto es un palíndromo.");
+		}
+		else {
+			document.write("El texto no es un palíndromo.");
+		}
+	</script>
+</body>
+</html>

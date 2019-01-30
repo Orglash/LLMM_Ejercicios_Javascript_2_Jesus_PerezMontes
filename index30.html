@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Relacion 2. Ejercicio 30.</title>
+</head>
+<body>
+	<script>
+	    function aleatorio(minimo,maximo){
+	      var numero = Math.round((Math.random() * (maximo-minimo)) + minimo);
+	      return numero;
+	    }
+	    do{
+	    	var minimo = Number(prompt("Introduzca el mínimo del intervalo (entre 1 y 100): "));
+	    	var maximo = Number(prompt("Introduzca el máximo del intervalo (entre 1 y 100): "));
+	    	if(minimo<1 || minimo>100 || maximo<1 || maximo>100){
+	    		alert("Valores del intervalo erroneos.");
+	    	}else{
+	    		if(minimo>=maximo){
+	    			alert("El minimo introducido es mayor que el maximo.");
+	    		}
+	    	}
+	    }while(minimo<1 || minimo>100 || maximo<1 || maximo>100 || minimo>=maximo);
+	    var resultado = aleatorio(minimo,maximo);
+	    document.write(resultado);
+  </script>
+</body>
+</html>

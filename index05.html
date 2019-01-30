@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Relacion 2. Ejercicio 5.</title>
+</head>
+<body>
+	<script>
+		var letras_dni = "TRWAGMYFPDXBNJZSQVHLCKE";
+	    var letra = "";
+	    do{
+			var numero = Number(prompt("Introduzca un numero de DNI: ")); 	   	
+		    if((numero > 9999999) && (numero < 100000000)){
+		    	var resto = numero % 23;
+		    	letra = letras_dni.charAt(resto);
+		    	document.write("La letra del DNI introducido ("+numero+") es: "+letra);
+		    }else{
+		    	document.write("El numero de DNI introducido es incorrecto.")
+		    }
+		}while((numero < 9999999) && (numero > 100000000));	
+	</script>
+</body>
+</html>

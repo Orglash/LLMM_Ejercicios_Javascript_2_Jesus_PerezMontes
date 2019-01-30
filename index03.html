@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Relacion 2. Ejercicio 3.</title>
+</head>
+<body>
+	<script>
+		var resultado = "";
+        do {
+            var cadena = prompt("Introduce una cadena de texto:");
+            if (resultado == "") {
+                resultado = resultado + cadena;
+            }
+            else {
+            	if(cadena!=null)
+                resultado = resultado + "-" + cadena;
+            }
+        } while (cadena!=null);
+        document.write(resultado);		
+	</script>
+</body>
+</html>

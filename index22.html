@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Relacion 2. Ejercicio 22.</title>
+</head>
+<body>
+	<script>
+	    var cadena = prompt("Introduzca un texto:");
+	    var cadena = cadena.toLowerCase();
+	    var longitud = cadena.length;
+	    var posicion = null;
+	    for (var i = 0; i < longitud; i++) {
+	        if (cadena.charAt(i) == "a" || cadena.charAt(i) == "e" || cadena.charAt(i) == "i" || cadena.charAt(i) == "o" || cadena.charAt(i) == "u") {
+	            posicion = i+1;	                
+	            break;
+	        }
+	    }
+	    document.write("La primera vocal está en la posición " + posicion+".");
+	</script>
+</body>
+</html>

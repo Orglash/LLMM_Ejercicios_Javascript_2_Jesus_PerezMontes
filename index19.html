@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Relacion 2. Ejercicio 19.</title>
+</head>
+<body>
+	<script>
+	    var cadena = prompt("Introducza un texto que contenga paréntesis:");
+	    var longitud = cadena.length;
+	    var letra;
+	    var captura = "";
+	    var parAbierto = false;
+	        
+		for (i=0; i<longitud; i++) {
+			letra = cadena.charAt(i);
+			if (letra == ")") {
+	            parAbierto = false;
+	        }
+	        if (parAbierto) {
+	            captura = captura + letra;
+	        }
+	        if (letra == "(") {
+	            parAbierto = true;
+	        }
+	    }
+	    document.write("El texto entre parentesis que se ha introducido es: '"+captura+"'.");
+	</script>
+</body>
+</html>
